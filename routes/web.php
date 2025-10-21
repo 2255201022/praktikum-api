@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FakultasController;
+use App\Models\Fakultas;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [DashboardController::class,'index'])->name('dashboard.index');
-Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index');
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+
+Route::get('/fakultas', [FakultasController::class, 'index'])->name('fakultas.index');
+
+
+
+
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+Route::get('/data', function () {
+    return view('data');
+});

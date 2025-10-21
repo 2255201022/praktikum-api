@@ -1,10 +1,12 @@
-  @extends('layouts.app')
-
-  @section('content')
-  
-  <!-- Page Heading -->
+@extends('layout.app')
+@section('content')
+<!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">{{ $fakultas->nama_fakultas }}</h1>
+
+                    @foreach ($fakultas as $item )
+                     <h1 class="h3 mb-0 text-gray-800">{{ $item->nama_fakultas }}</h1>
+                    @endforeach
+                       
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
@@ -326,5 +328,4 @@
 
                         </div>
                     </div>
-
-  @endsection
+@endsection
