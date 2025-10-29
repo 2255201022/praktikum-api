@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Fakultas;
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -11,9 +12,9 @@ class DashboardController extends Controller
    public function index(){
 
     $fakultas = Fakultas::all();
+    $prodi = Prodi::all();
+    return view('welcome', compact('fakultas','prodi'));
 
-    
-    return view('welcome', compact('fakultas'));
    }
 
 

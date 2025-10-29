@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Fakultas extends Model
+class Prodi extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nama_fakultas', 'kode_fakultas'];
+    protected $fillable = ['nama_prodi', 'kode_prodi'];
 }

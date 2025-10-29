@@ -1,18 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Fakultas;
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 
-class FakultasController extends Controller
+class ProdiController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $fakultas = Fakultas::all();
-        return view('fakultas.index', compact('fakultas'));
+        $prodi = Prodi::all();
+        return view('prodi.index', compact('prodi'));
     }
 
     /**
@@ -20,8 +20,8 @@ class FakultasController extends Controller
      */
     public function create()
     {
-        $fakultas = Fakultas::all();
-        return view('fakultas.create', compact('fakultas'));
+        $prodi = Prodi::all();
+        return view('prodi.create', compact('prodi'));
     }
 
     /**
@@ -30,15 +30,15 @@ class FakultasController extends Controller
     public function store(Request $request)
     {
         $validate = $request->validate([
-            'nama_fakultas' => 'required|max:50',
-            'kode_fakultas' => 'required'
+            'nama_prodi' => 'required|max:50',
+            'kode_prodi' => 'required'
         ]);
-        $fakultas = Fakultas :: create([
-            'nama_fakultas' => $request->nama_fakultas,
-            'kode_fakultas' => $request->kode_fakultas
+        $prodi = Prodi :: create([
+            'nama_prodi' => $request->nama_prodi,
+            'kode_prodi' => $request->kode_prodi
         ]);
 
-        return redirect()->route('fakultas.index');
+        return redirect()->route('prodi.index');
     }
 
     /**

@@ -4,15 +4,15 @@
 
 
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Daftar Fakultas</h1>
-<a href="{{ route('fakultas.create') }}" class="btn btn-primary mb-4">Tambah Fakultas</a>
+<h1 class="h3 mb-2 text-gray-800">Daftar Prodi</h1>
+<a href="{{ route('prodi.create') }}" class="btn btn-primary mb-4">Tambah prodi</a>
 
 
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Data Fakultas</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Data Prodi</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -20,17 +20,17 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Nama Fakultas</th>
-                        <th>Kode Fakultas</th>
+                        <th>Nama Prodi</th>
+                        <th>Kode Prodi</th>
                     </tr>
                 </thead>
                 <tfoot>
                 <tbody>
-                    @foreach ($fakultas as $item)
+                    @foreach ($prodi as $item)
                         <tr>
                             <th>{{ $loop->iteration }}</th>
-                            <th>{{ $item->nama_fakultas }}</th>
-                            <th>{{ $item->kode_fakultas }}</th>                       
+                            <th>{{ $item->nama_prodi }}</th>
+                            <th>{{ $item->kode_prodi }}</th>                       
                         </tr>
                     @endforeach                    
                    
