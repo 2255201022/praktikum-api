@@ -54,6 +54,14 @@
                 </a>
             </li>
 
+             <!-- Nav Item - Prodi -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/prodi') }}">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Data Prodi</span>
+                </a>
+            </li>
+
             <!-- Nav Item - Profile -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('/profile') }}">

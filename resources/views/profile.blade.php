@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Profesional | Nama Anda</title>
+    <title>Profil Universitas</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
         <aside class="profile-sidebar">
             <div class="sidebar-header">
                 <img src="https://via.placeholder.com/150" alt="Foto Profil Anda" class="profile-picture">
-                <h1 class="profile-name">NAMA ANDA</h1>
-                <p class="profile-title">Web Developer & UI/UX Enthusiast</p>
+                <h1 class="profile-name">Universitas Pahlawan Tuanku Tambusai</h1>
+                <p class="profile-title">Kampus Favorit</p>
             </div>
 
             <div class="sidebar-content">
@@ -25,9 +25,8 @@
                     <h3 class="section-title">Kontak</h3>
                     <ul>
                         <li><i class="fas fa-envelope"></i> emailanda@example.com</li>
-                        <li><i class="fas fa-phone"></i> +62 812 3456 7890</li>
+                        <li><i class="fas fa-phone"></i> (0761) 543210</li>
                         <li><i class="fas fa-map-marker-alt"></i> Bangkinang, Riau</li>
-                        <li><i class="fab fa-linkedin"></i> linkedin.com/in/namaanda</li>
                         <li><i class="fab fa-github"></i> github.com/namaanda</li>
                     </ul>
                 </div>

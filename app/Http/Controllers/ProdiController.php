@@ -20,8 +20,8 @@ class ProdiController extends Controller
      */
     public function create()
     {
-        $prodi = Prodi::all();
-        return view('prodi.create', compact('prodi'));
+        $fakultas = \App\Models\Fakultas::all();
+        return view('prodi.create', compact('fakultas'));
     }
 
     /**
@@ -31,14 +31,16 @@ class ProdiController extends Controller
     {
         $validate = $request->validate([
             'nama_prodi' => 'required|max:50',
-            'kode_prodi' => 'required'
+            'kode_prodi' => 'required|unique:prodis,kode_prodi',
+            'fakultas_id' => 'required|exists:fakultas,id',
         ]);
         $prodi = Prodi :: create([
             'nama_prodi' => $request->nama_prodi,
-            'kode_prodi' => $request->kode_prodi
+            'kode_prodi' => $request->kode_prodi,
+            'fakultas_id' => $request->fakultas_id,
         ]);
 
-        return redirect()->route('prodi.index');
+        return redirect()->route('prodi.index')->with('success', 'Prodi berhasil ditambahkan.');
     }
 
     /**
